@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BatiDevis — Politique de confidentialité</title>
+<style>
+  :root {
+    --bg: #111318;
+    --card: #1A1D26;
+    --border: #2E3347;
+    --orange: #E8700A;
+    --muted: #7C8299;
+    --text: #F0EDE8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+    background: var(--orange);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 4px 0 0;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 24px 0 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  h2 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 32px 0 12px;
+  }
+  h2::before {
+    content: "";
+    width: 3px;
+    height: 15px;
+    background: var(--orange);
+    border-radius: 2px;
+    display: inline-block;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+  .card p { margin: 0 0 10px; }
+  .card p:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--orange); text-decoration: underline; }
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">🏗️</div>
+    <div>
+      <h1>BatiDevis</h1>
+      <p class="subtitle">Politique de confidentialité</p>
+    </div>
+  </header>
+
+  <p class="updated">Dernière mise à jour : 23 août 2026</p>
+
+  <p>
+    BatiDevis est une application mobile destinée aux artisans du bâtiment pour créer des devis,
+    gérer leurs clients et générer des factures. Cette page explique quelles données sont traitées,
+    comment elles sont stockées, et quels sont vos droits.
+  </p>
+
+  <h2>Données collectées</h2>
+  <div class="card">
+    <p>
+      BatiDevis traite les données suivantes, exclusivement pour le fonctionnement de l'application :
+      informations de votre entreprise (nom, SIRET, logo), vos clients (nom, adresse, contact),
+      vos devis et vos factures.
+    </p>
+    <p>
+      Ces données sont stockées <strong>localement sur votre appareil</strong>. Si vous activez la
+      sauvegarde Google Drive, une copie est envoyée vers <strong>votre propre espace de stockage
+      Google</strong> (dossier privé « appData », invisible dans votre Drive classique) — jamais vers
+      un serveur exploité par nous.
+    </p>
+  </div>
+
+  <h2>Vos droits (RGPD)</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Droit d'accès</strong> : consultez vos données directement dans l'application.</li>
+      <li><strong>Droit de rectification</strong> : modifiez vos clients, devis et factures à tout moment.</li>
+      <li><strong>Droit à l'effacement</strong> : supprimez toutes vos données depuis Réglages → Effacer mes données.</li>
+      <li><strong>Droit à la portabilité</strong> : exportez vos données au format JSON depuis Réglages.</li>
+      <li><strong>Droit d'opposition</strong> : désactivez la sauvegarde cloud à tout moment.</li>
+    </ul>
+  </div>
+
+  <h2>Services tiers utilisés</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Google Drive</strong> — sauvegarde de vos données, uniquement si vous l'activez.</li>
+      <li><strong>API Recherche d'entreprises</strong> (data.gouv.fr) — recherche SIREN ; aucune donnée personnelle n'est transmise, seul le texte recherché.</li>
+      <li><strong>RevenueCat / Google Play</strong> — gestion de l'abonnement ; traite l'e-mail du compte Google utilisé pour la facturation.</li>
+    </ul>
+  </div>
+
+  <h2>Ce que nous ne faisons pas</h2>
+  <div class="card">
+    <ul>
+      <li>Nous ne vendons ni ne partageons vos données avec des tiers à des fins publicitaires.</li>
+      <li>Nous n'affichons aucune publicité dans l'application.</li>
+      <li>Nous n'avons pas accès à vos données stockées sur votre Google Drive personnel.</li>
+    </ul>
+  </div>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>
+      Pour toute question relative à vos données personnelles ou pour exercer vos droits RGPD,
+      contactez-nous à l'adresse :
+      <a href="mailto:itimelec@gmail.com">itimelec@gmail.com</a>
+    </p>
+  </div>
+
+  <footer>
+    BatiDevis — Application de gestion de devis et factures pour artisans
+  </footer>
+
+</div>
+</body>
+</html>
