@@ -113,7 +113,7 @@
     </div>
   </header>
 
-  <p class="updated">Dernière mise à jour : 12 octobre 2026</p>
+  <p class="updated">Dernière mise à jour : 23 octobre 2026 (version 1.3.8)</p>
 
   <p>
     BatiDevis est une application mobile destinée aux artisans du bâtiment pour créer des devis,
@@ -125,14 +125,64 @@
   <div class="card">
     <p>
       BatiDevis traite les données suivantes, exclusivement pour le fonctionnement de l'application :
-      informations de votre entreprise (nom, SIRET, logo), vos clients (nom, adresse, contact),
-      vos devis et vos factures.
+      informations de vos entreprises (nom, SIRET, logo), vos clients (nom, adresse, contact),
+      vos devis, vos factures, vos avoirs et votre catalogue de prestations.
     </p>
     <p>
-      Ces données sont stockées <strong>localement sur votre appareil</strong>. Si vous activez la
-      sauvegarde Google Drive, une copie est envoyée vers <strong>votre propre espace de stockage
-      Google</strong> (dossier privé « appData », invisible dans votre Drive classique) — jamais vers
-      un serveur exploité par nous.
+      Ces données sont stockées <strong>localement sur votre appareil</strong>. BatiDevis n'utilise
+      <strong>aucun serveur de l'éditeur</strong> : nous ne recevons ni ne conservons aucune de vos données,
+      à l'exception des informations d'abonnement traitées par RevenueCat (voir Services tiers).
+    </p>
+    <p>
+      Vos devis et factures ne sont envoyés par e-mail ou par WhatsApp qu'à votre initiative, par les
+      applications de votre téléphone.
+    </p>
+  </div>
+
+  <h2>Sauvegarde Google Drive (facultative)</h2>
+  <div class="card">
+    <p>
+      Si vous connectez la sauvegarde Google Drive, l'application enregistre ses sauvegardes dans un
+      dossier visible <strong>« BatiDevis/Sauvegardes »</strong> de <strong>votre propre Google Drive</strong>.
+      Elle utilise pour cela le droit Google « drive.file », limité aux fichiers créés par l'application :
+      elle n'a pas accès à vos autres fichiers.
+    </p>
+    <p>
+      Les versions précédentes de l'application utilisaient un dossier caché propre à l'application
+      (droit « drive.appdata »). Ce dossier est encore lu pendant la transition, jusqu'au 21 avril 2027.
+    </p>
+    <p>
+      Plusieurs versions de vos sauvegardes sont conservées : les 10 dernières et une par mois pendant 24 mois.
+    </p>
+    <p>
+      <strong>Sauvegarde automatique</strong> : après l'émission d'une facture ou d'un avoir, et au passage
+      de l'application en arrière-plan. Vous pouvez la désactiver dans les Réglages.
+    </p>
+    <p>
+      <strong>Registre de numérotation</strong> : l'application tient dans votre Google Drive un registre
+      qui ne contient que le numéro, la date d'émission et une empreinte de chaque facture et de chaque
+      avoir, sans montant ni nom de client.
+    </p>
+    <p>
+      <strong>Connexion Google</strong> : votre adresse e-mail sert uniquement à accéder à votre Google Drive.
+    </p>
+    <p>
+      Si la sauvegarde automatique d'Android est activée sur votre téléphone, Android peut aussi copier les
+      données de l'application dans votre compte Google. Ce service est géré par Google et se règle dans les
+      paramètres de votre téléphone.
+    </p>
+  </div>
+
+  <h2>Chiffrement des sauvegardes (facultatif)</h2>
+  <div class="card">
+    <p>
+      Vous pouvez chiffrer vos sauvegardes avec un mot de passe que vous choisissez, accompagné d'une
+      clé de secours. Le chiffrement utilise AES-256-GCM, avec une clé dérivée de votre mot de passe par
+      PBKDF2-SHA256. Quand cette option est active, le registre de numérotation est chiffré lui aussi.
+    </p>
+    <p>
+      <strong>Sans votre mot de passe ni votre clé de secours, vos sauvegardes chiffrées sont définitivement
+      illisibles, y compris pour l'éditeur.</strong>
     </p>
   </div>
 
@@ -141,18 +191,18 @@
     <ul>
       <li><strong>Droit d'accès</strong> : consultez vos données directement dans l'application.</li>
       <li><strong>Droit de rectification</strong> : modifiez vos clients, devis et factures à tout moment.</li>
-      <li><strong>Droit à l'effacement</strong> : supprimez toutes vos données depuis Réglages → Effacer mes données.</li>
+      <li><strong>Droit à l'effacement</strong> : supprimez les données du téléphone depuis Réglages → Effacer toutes mes données, et vos sauvegardes Google Drive comme expliqué dans <a href="#suppression">Supprimer vos données</a>.</li>
       <li><strong>Droit à la portabilité</strong> : exportez vos données au format JSON depuis Réglages.</li>
-      <li><strong>Droit d'opposition</strong> : désactivez la sauvegarde cloud à tout moment.</li>
+      <li><strong>Droit d'opposition</strong> : désactivez la sauvegarde automatique dans les Réglages, ou retirez à BatiDevis l'accès à votre Google Drive dans les paramètres de votre compte Google.</li>
     </ul>
   </div>
 
   <h2>Services tiers utilisés</h2>
   <div class="card">
     <ul>
-      <li><strong>Google Drive</strong> — sauvegarde de vos données, uniquement si vous l'activez.</li>
+      <li><strong>Google Drive</strong> — sauvegarde de vos données dans votre propre Google Drive, uniquement si vous la connectez.</li>
       <li><strong>API Recherche d'entreprises</strong> (data.gouv.fr) — recherche SIREN ; aucune donnée personnelle n'est transmise, seul le texte recherché.</li>
-      <li><strong>RevenueCat / Google Play</strong> — gestion de l'abonnement ; traite l'e-mail du compte Google utilisé pour la facturation.</li>
+      <li><strong>Google Play / RevenueCat</strong> — gestion de l'abonnement ; RevenueCat traite l'historique de vos achats pour gérer l'abonnement (voir la <a href="https://www.revenuecat.com/privacy">politique de confidentialité de RevenueCat</a>).</li>
     </ul>
   </div>
 
@@ -162,6 +212,17 @@
       <li>Nous ne vendons ni ne partageons vos données avec des tiers à des fins publicitaires.</li>
       <li>Nous n'affichons aucune publicité dans l'application.</li>
       <li>Nous n'avons pas accès à vos données stockées sur votre Google Drive personnel.</li>
+    </ul>
+  </div>
+
+  <h2 id="suppression">Supprimer vos données</h2>
+  <div class="card">
+    <p>Pour supprimer toutes vos données BatiDevis :</p>
+    <ul>
+      <li><strong>Sur votre téléphone</strong> : dans l'application, ouvrez Réglages et appuyez sur « Effacer toutes mes données ». Toutes les données de l'application sont supprimées de ce téléphone.</li>
+      <li><strong>Vos sauvegardes Google Drive</strong> : ouvrez votre Google Drive et supprimez le dossier « BatiDevis/Sauvegardes ».</li>
+      <li><strong>Si vous avez utilisé une ancienne version</strong> : ses sauvegardes sont dans un dossier caché. Dans Google Drive, ouvrez Paramètres → Gérer les applications → BatiDevis → « Supprimer les données d'application cachées ».</li>
+      <li><strong>Retirer l'accès de BatiDevis</strong> : vous pouvez ensuite retirer à BatiDevis l'accès à votre compte dans les paramètres de votre compte Google.</li>
     </ul>
   </div>
 
