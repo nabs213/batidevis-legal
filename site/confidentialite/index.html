@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité · 2vis Go</title>
+<meta name="description" content="Données traitées par l'appli 2vis Go et le site app.2visgo.fr, où elles vont et comment les supprimer.">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="page">
+  <header class="entete"><img src="/icone-192.png" alt="" width="40" height="40"><a href="/">2vis Go</a></header>
+
+  <h1>Politique de confidentialité</h1>
+  <p class="maj">Appli Android 2vis Go et site app.2visgo.fr. Mise à jour le 22 novembre 2026.</p>
+
+  <div class="encadre">
+    <p>En bref : vos clients, devis et factures restent sur votre téléphone et, si vous le voulez, dans votre propre Google Drive. Nous n'avons aucun serveur qui les reçoit. Seules les informations nécessaires à l'abonnement passent par nos prestataires (RevenueCat, Stripe, Google Play).</p>
+  </div>
+
+  <h2>1. Responsable du traitement</h2>
+  <p>Nabil ITIM, entrepreneur individuel (EI), nom commercial AppliDigital, 18 allée d'Anjou, 38130 Échirolles, France. E-mail : <a href="mailto:AppliDigital.Pro@gmail.com">AppliDigital.Pro@gmail.com</a>, téléphone : 06 28 82 05 48. Il n'y a pas de délégué à la protection des données.</p>
+
+  <h2>2. Vos données de travail</h2>
+  <p>Ce que vous saisissez dans l'appli : vos entreprises (nom, SIRET, adresse, logo…), vos clients, vos devis, factures, avoirs, avenants, paiements et relances, votre catalogue de prestations, les factures reçues de vos fournisseurs et les fichiers que vous joignez (PDF, photos de devis signés).</p>
+  <ul>
+    <li><strong>Sur le téléphone</strong>, ces données sont enregistrées dans l'appli, sur l'appareil.</li>
+    <li><strong>Sur le site app.2visgo.fr</strong>, elles sont lues dans votre Google Drive et gardées en mémoire le temps de la session. Le navigateur ne conserve que quelques réglages (voir la section 6).</li>
+  </ul>
+  <p>Nous ne recevons pas ces données. Elles servent uniquement au fonctionnement de l'appli que vous utilisez (base légale : exécution du contrat, c'est-à-dire des <a href="/cgu/">conditions d'utilisation</a>).</p>
+  <p>Vos devis et factures ne sont envoyés à vos clients qu'à votre demande : sur le téléphone, par votre application d'e-mail ou le menu de partage ; sur le site, en téléchargeant le PDF ou par un lien qui ouvre votre messagerie.</p>
+  <p>Les photos et fichiers sont choisis par vous dans la galerie ou les fichiers de l'appareil. L'appli n'utilise ni l'appareil photo, ni vos contacts, ni votre position.</p>
+
+  <h2>3. Connexion Google et Google Drive</h2>
+  <p>La connexion Google est facultative sur le téléphone et obligatoire sur le site. Elle sert à enregistrer et relire vos données dans votre Google Drive.</p>
+  <p>L'appli demande à Google le droit « drive.file », limité aux fichiers qu'elle a créés : elle ne voit pas le reste de votre Drive. Les anciennes versions utilisaient un dossier caché propre à l'appli (droit « drive.appdata ») ; le téléphone le lit encore jusqu'au 21 avril 2027.</p>
+  <p>De votre compte Google, l'appli lit votre adresse e-mail (affichée dans les Réglages) et, sur le site, votre nom. Elle lit aussi des identifiants techniques de compte, qu'elle transforme par hachage pour créer deux identifiants qui ne révèlent ni votre adresse ni votre nom : l'un pour l'abonnement, l'autre pour le décompte des documents gratuits. L'autorisation d'accès donnée par Google dure environ une heure sur le site et reste en mémoire.</p>
+  <p>Dans votre Drive, l'appli crée un dossier « 2vis Go » qui contient :</p>
+  <ul>
+    <li><strong>Sauvegardes</strong> : copies complètes de vos données, et le registre de numérotation (numéro, date et empreinte de chaque facture et avoir, sans montant ni nom de client). Sauvegarde automatique après l'émission d'une facture ou d'un avoir et au passage de l'appli en arrière-plan, désactivable dans les Réglages. Sont gardées les 10 dernières sauvegardes et la dernière de chacun des 24 derniers mois ; les autres partent dans la corbeille de votre Drive.</li>
+    <li><strong>Synchro</strong> : le fichier commun qui relie le téléphone et le site (vos données, la liste de vos appareils avec un identifiant aléatoire, la plateforme et la version, l'état de l'abonnement, le décompte des documents gratuits) et les numéros de documents réservés.</li>
+    <li><strong>Documents émis</strong> : la copie exacte (PDF ou Factur-X) de chaque facture, avoir, devis ou avenant envoyé, et les devis signés que vos clients vous ont renvoyés. Le nom du fichier contient le nom du client.</li>
+    <li><strong>Factures reçues</strong> : les factures de vos fournisseurs, telles que vous les avez importées.</li>
+  </ul>
+  <p>Ces fichiers sont dans votre Drive, sous votre contrôle : ils y restent tant que vous ne les supprimez pas.</p>
+
+  <h2>4. Chiffrement des sauvegardes (facultatif)</h2>
+  <p>Vous pouvez chiffrer vos données avec un mot de passe que vous choisissez, accompagné d'une clé de secours. Le chiffrement utilise AES-256-GCM, avec une clé protégée par PBKDF2-SHA256. Il couvre les sauvegardes, le registre, le fichier commun et l'export JSON. Il ne couvre pas les dossiers « Documents émis » et « Factures reçues », ni les fichiers de numéros réservés.</p>
+  <p>Sans votre mot de passe ni votre clé de secours, vos données chiffrées sont définitivement illisibles, y compris pour nous.</p>
+
+  <h2>5. Abonnement et paiement</h2>
+  <p>L'abonnement est géré par RevenueCat, qui le rattache à l'identifiant d'abonnement décrit à la section 3 (sur le téléphone, avant toute connexion Google, à un identifiant anonyme créé par RevenueCat).</p>
+  <ul>
+    <li><strong>Sur le téléphone</strong>, l'achat se fait dans Google Play. RevenueCat reçoit l'historique de vos achats Google Play.</li>
+    <li><strong>Sur le site</strong>, avant l'achat, l'appli transmet à RevenueCat le nom et le SIREN de votre entreprise, qui servent à établir la facture d'AppliDigital. La fenêtre de paiement de RevenueCat reçoit votre adresse e-mail (modifiable), pour la confirmation de commande et les reçus. Le paiement est traité par Stripe : nous ne recevons pas vos numéros de carte. Le module RevenueCat du site envoie aussi des informations techniques : identifiant d'abonnement, langue et fuseau horaire du navigateur, type de navigateur, taille d'écran, adresse et titre de la page, page d'origine.</li>
+  </ul>
+  <p>Base légale : exécution du contrat de vente (<a href="/cgv/">conditions générales de vente</a>).</p>
+  <p>AppliDigital établit une facture pour chaque paiement fait sur le site, avec le nom, le SIREN et l'adresse e-mail de l'acheteur. Les factures sont conservées 10 ans, durée de conservation des pièces comptables (base légale : obligation légale).</p>
+
+  <h2>6. Stockage dans le navigateur (site app.2visgo.fr)</h2>
+  <p>Le site lui-même ne dépose aucun cookie. Il garde dans votre navigateur :</p>
+  <ul>
+    <li>une base locale (IndexedDB) avec vos réglages : métier choisi, présentation déjà vue, acceptation de cette politique, identifiant aléatoire de l'appareil, et pour chaque compte Google l'état de la numérotation et la dernière formule d'abonnement vérifiée ;</li>
+    <li>dans le stockage de session, deux indicateurs techniques effacés à la fermeture de l'onglet ;</li>
+    <li>l'identifiant d'abonnement, enregistré par le module RevenueCat (stockage local).</li>
+  </ul>
+  <p>La connexion Google et la fenêtre de paiement Stripe peuvent déposer leurs propres traceurs, nécessaires à la connexion et au paiement. Ces éléments servent seulement au fonctionnement du service que vous demandez : ils ne demandent pas votre consentement et ne servent ni à la publicité ni à la mesure d'audience.</p>
+
+  <h2>7. Recherche d'entreprise par le nom</h2>
+  <p>Quand vous tapez le nom d'un client professionnel, l'appli envoie ce texte à l'API Recherche d'entreprises de l'État (recherche-entreprises.api.gouv.fr) pour retrouver son SIREN et son adresse. Rien d'autre n'est envoyé, et cette recherche n'est pas faite pour les clients particuliers.</p>
+
+  <h2>8. Sauvegarde automatique d'Android</h2>
+  <p>Si la sauvegarde automatique d'Android est activée sur votre téléphone, Android peut copier les données de l'appli dans votre compte Google. Ce service est géré par Google et se règle dans les paramètres du téléphone.</p>
+
+  <h2>9. Prestataires et transferts hors de l'Union européenne</h2>
+  <div class="tableau">
+  <table>
+    <thead><tr><th>Prestataire</th><th>Rôle</th><th>Transfert hors UE</th></tr></thead>
+    <tbody>
+      <tr><td>Google LLC (États-Unis)</td><td>Connexion Google, Google Drive, Google Play</td><td>Cadre de protection des données UE-États-Unis (décision de la Commission européenne du 10 juillet 2023) et clauses contractuelles types</td></tr>
+      <tr><td>RevenueCat, Inc. (États-Unis)</td><td>Gestion des abonnements, fenêtre de paiement du site</td><td>Clauses contractuelles types de la Commission européenne ; données hébergées chez Amazon Web Services aux États-Unis</td></tr>
+      <tr><td>Stripe, Inc. (États-Unis)</td><td>Paiement par carte sur le site</td><td>Cadre de protection des données UE-États-Unis et clauses contractuelles types</td></tr>
+      <tr><td>Cloudflare, Inc. (États-Unis)</td><td>Hébergement des sites www.2visgo.fr et app.2visgo.fr</td><td>Cadre de protection des données UE-États-Unis et clauses contractuelles types</td></tr>
+      <tr><td>API Recherche d'entreprises (État français)</td><td>Recherche du SIREN d'un client</td><td>Aucun</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Chacun traite les données selon sa propre politique de confidentialité. Nous ne vendons ni ne partageons vos données à des fins publicitaires. L'appli n'affiche pas de publicité et ne contient pas d'outil de mesure d'audience. Aucune décision automatisée n'est prise à votre sujet.</p>
+
+  <h2>10. Durées de conservation</h2>
+  <ul>
+    <li>Sur le téléphone et dans le navigateur : jusqu'à ce que vous les effaciez (section 12) ou désinstalliez l'appli.</li>
+    <li>Dans votre Google Drive : sous votre contrôle, avec les règles de rotation des sauvegardes de la section 3.</li>
+    <li>Chez RevenueCat : pendant la durée du contrat entre AppliDigital et RevenueCat, puis suppression ou restitution sur demande.</li>
+    <li>Factures d'AppliDigital : 10 ans.</li>
+  </ul>
+
+  <h2>11. Vos droits</h2>
+  <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. La plupart s'exercent directement dans l'appli : vous consultez et modifiez vos données, vous les exportez au format JSON depuis les Réglages, vous désactivez la sauvegarde automatique, vous effacez vos données (section 12).</p>
+  <p>Pour les données d'abonnement détenues par RevenueCat ou toute autre demande, écrivez à <a href="mailto:AppliDigital.Pro@gmail.com">AppliDigital.Pro@gmail.com</a>.</p>
+  <p>Vous pouvez aussi adresser une réclamation à la CNIL : en ligne sur <a href="https://www.cnil.fr/fr/plaintes">cnil.fr/fr/plaintes</a>, ou par courrier à la CNIL, Service des plaintes, 3 place de Fontenoy, 75007 Paris.</p>
+
+  <h2>12. Supprimer vos données</h2>
+  <ul>
+    <li><strong>Dans l'appli</strong> : Réglages, « Effacer toutes mes données ». Vos entreprises, clients, documents et réglages sont supprimés de l'appareil, et l'appareil quitte la synchronisation. Les compteurs de documents gratuits sont gardés, pour que la réinstallation ne redonne pas de documents gratuits (base légale : intérêt légitime). Vos fichiers Google Drive ne sont pas touchés.</li>
+    <li><strong>Dans Google Drive</strong> : supprimez le dossier « 2vis Go ». Si vous avez utilisé une ancienne version, ouvrez Paramètres, Gérer les applications, 2vis Go, puis « Supprimer les données d'application cachées ».</li>
+    <li><strong>Accès Google</strong> : vous pouvez retirer à 2vis Go l'accès à votre compte dans les paramètres de votre compte Google.</li>
+    <li><strong>Abonnement</strong> : demandez la suppression par e-mail à l'adresse ci-dessus.</li>
+  </ul>
+
+  <h2>13. Données obligatoires</h2>
+  <p>Le site ne fonctionne pas sans compte Google. Pour acheter un abonnement sur le site, le nom et le SIRET de l'entreprise sont obligatoires : sans eux, la vente ne peut pas avoir lieu.</p>
+
+  <h2>14. Modifications</h2>
+  <p>Cette politique peut évoluer avec l'appli. La date de mise à jour figure en haut de la page.</p>
+
+  <footer>
+    <ul>
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/confidentialite/">Confidentialité</a></li>
+      <li><a href="/cgu/">Conditions d'utilisation</a></li>
+      <li><a href="/cgv/">Conditions de vente</a></li>
+      <li><a href="/mentions-legales/">Mentions légales</a></li>
+    </ul>
+  </footer>
+</main>
+</body>
+</html>
