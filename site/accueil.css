@@ -1,0 +1,527 @@
+/* Page d'accueil de 2vis Go. Les pages légales gardent style.css. */
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/polices/poppins-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/polices/poppins-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/polices/poppins-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/polices/poppins-800.woff2") format("woff2");
+}
+
+:root {
+  --fond: #141414;
+  --fond-section: #1C1C1C;
+  --carte: #242424;
+  --bord: #2E2E2E;
+  --filet: #2A2A2A;
+  --texte: #F2F2F2;
+  --texte-doux: #E6E6E6;
+  --menu: #C9C9C9;
+  --gris: #BDBDBD;
+  --gris-discret: #9A9A9A;
+  --orange: #F57C1F;
+  --orange-survol: #FF9A45;
+  --marge: 32px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+img { max-width: 100%; }
+
+a { color: var(--orange); }
+a:hover { color: var(--orange-survol); }
+
+a:focus-visible {
+  outline: 3px solid var(--orange-survol);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+h1, h2, h3, p, figure { margin: 0; }
+
+.site { overflow: hidden; }
+
+.orange { color: var(--orange); }
+
+/* En-tête */
+
+.entete {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px var(--marge);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--texte);
+}
+
+.marque:hover { color: var(--texte); }
+
+.marque img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+.marque span {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 28px;
+  font-size: 15px;
+}
+
+.menu a {
+  color: var(--menu);
+  text-decoration: none;
+}
+
+.menu a:hover { color: var(--texte); }
+
+/* Boutons */
+
+.bouton {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 14px;
+}
+
+.bouton-plein {
+  background: var(--orange);
+  color: var(--fond);
+}
+
+.bouton-plein:hover {
+  background: var(--orange-survol);
+  color: var(--fond);
+}
+
+.bouton-contour {
+  border: 1.5px solid var(--orange);
+  color: var(--texte);
+}
+
+.bouton-contour:hover {
+  border-color: var(--orange-survol);
+  color: var(--texte);
+}
+
+/* Bandeau principal */
+
+.bandeau {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px var(--marge) 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.bandeau-texte,
+.bandeau-visuel {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.bandeau-texte {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bandeau-titre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.bandeau-titre img {
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+}
+
+.bandeau h1 {
+  font-size: clamp(56px, 8vw + 24px, 104px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.accroche {
+  font-size: clamp(22px, 1.5vw + 16px, 32px);
+  font-weight: 300;
+  color: var(--texte-doux);
+}
+
+.presentation {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--gris);
+  max-width: 520px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.actions .bouton { font-size: 17px; }
+.actions .bouton-plein { padding: 16px 28px; }
+.actions .bouton-contour { padding: 15px 26px; }
+
+.essai {
+  font-size: 14px;
+  color: var(--gris-discret);
+}
+
+.bandeau-visuel {
+  display: flex;
+  justify-content: center;
+}
+
+.bandeau-visuel img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+
+/* Cercles décoratifs */
+
+.rond {
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+/* Écran étroit et moyen : le texte passe au-dessus du téléphone,
+   le cercle se place derrière le téléphone. */
+.rond-bandeau {
+  right: -260px;
+  bottom: 150px;
+  width: 600px;
+  height: 600px;
+}
+
+@media (min-width: 1000px) {
+  .bandeau {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bandeau-texte { flex: 1 1 480px; }
+  .bandeau-visuel { flex: 1 1 420px; }
+
+  /* Le cercle part du haut du bandeau : s'il remontait dans l'en-tête,
+     les liens gris du menu se retrouveraient sur l'orange. */
+  .rond-bandeau {
+    top: 0;
+    bottom: auto;
+  }
+}
+
+/* Le cercle de la section Fonctions est accroché au bord droit.
+   En dessous de 1200 px, il recule pour ne jamais passer sous le titre. */
+.rond-fonctions {
+  top: -87px;
+  right: -200px;
+  width: 328px;
+  height: 307px;
+}
+
+@media (min-width: 1200px) {
+  .rond-fonctions { right: -90px; }
+}
+
+/* Sections */
+
+.section {
+  position: relative;
+  padding: 96px var(--marge);
+}
+
+.section-sombre { background: var(--fond-section); }
+
+.conteneur {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.conteneur-serre { gap: 40px; }
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 720px;
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+  .intro-fonctions { max-width: min(720px, calc(100% - 200px)); }
+}
+
+.surtitre {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  font-size: clamp(30px, 2vw + 22px, 44px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+/* Fonctions */
+
+.grille {
+  display: grid;
+  gap: 24px;
+}
+
+.grille-fonctions { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.carte {
+  background: var(--carte);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carte h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.carte p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--gris);
+}
+
+/* Captures */
+
+.grille-captures { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.grille-captures figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grille-captures img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  border: 1px solid var(--bord);
+}
+
+.grille-captures figcaption {
+  font-size: 14px;
+  color: var(--gris-discret);
+}
+
+/* Formules */
+
+.grille-formules { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.formule {
+  padding: 32px;
+  gap: 16px;
+}
+
+.formule-mise-en-avant { border: 2px solid var(--orange); }
+
+.formule h3 { font-size: 24px; }
+
+.formule p { color: var(--gris); }
+
+.formule p.prix {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--texte);
+}
+
+.prix span {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gris);
+}
+
+.precisions {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--gris-discret);
+}
+
+/* Vos données */
+
+.conteneur-colonnes {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.donnees-titre {
+  flex: 1 1 360px;
+  min-width: 0;
+}
+
+.donnees-texte {
+  flex: 1 1 520px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gris);
+}
+
+.donnees-texte strong { color: var(--texte); }
+
+/* Pied de page */
+
+.pied {
+  border-top: 1px solid var(--filet);
+  padding: 40px var(--marge);
+}
+
+.pied-contenu {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 14px;
+  color: var(--gris-discret);
+}
+
+.pied-contenu a { overflow-wrap: anywhere; }
+
+.pied nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+
+/* Téléphone */
+
+@media (max-width: 699px) {
+  :root { --marge: 16px; }
+
+  .rond { display: none; }
+
+  .entete { padding-top: 16px; padding-bottom: 16px; }
+
+  .menu { gap: 12px 20px; }
+
+  .bandeau { padding-top: 24px; padding-bottom: 64px; gap: 40px; }
+
+  .bandeau-titre { gap: 16px; }
+
+  .bandeau-titre img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+
+  .bandeau h1 { letter-spacing: -2px; }
+
+  .presentation { font-size: 17px; }
+
+  .actions .bouton { flex: 1 1 auto; }
+
+  .section { padding-top: 64px; padding-bottom: 64px; }
+
+  .conteneur { gap: 32px; }
+
+  .grille-captures {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .grille-captures img { border-radius: 16px; }
+
+  .carte { padding: 24px; }
+
+  .formule p.prix { font-size: 34px; }
+}
